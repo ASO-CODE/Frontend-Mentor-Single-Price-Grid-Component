@@ -1,0 +1,163 @@
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--Light-Gray);
+  padding: 1.25rem;
+  margin-top: 2.25rem;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.btn {
+  background-color: var(--Bright-Yellow);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+p,
+li {
+  line-height: 1.6;
+}
+
+p.green {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.container > article:first-child {
+  padding: 2rem;
+}
+
+.container > article:first-child h1 {
+  color: var(--Cyan);
+  margin-bottom: 1rem;
+}
+
+.container > article:first-child p {
+  margin-bottom: 1rem;
+}
+
+.container > article:first-child p:last-child {
+  color: var(--Grayish-Blue);
+  max-width: 500px;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+}
+
+.container section article {
+  padding: 2rem;
+  color: #fff;
+}
+
+.container section article:first-child {
+  background-color: var(--Cyan);
+}
+
+.container section article:first-child h2 {
+  margin-bottom: 1rem;
+}
+
+.container section article:first-child h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.container section article:first-child h3 span {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+.container section article:first-child p {
+  margin: 1rem 0;
+}
+
+.container section article:last-child {
+  background-color: hsl(179, 62%, 49%);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.container section article:last-child h2 {
+  margin-bottom: 1rem;
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 700px;
+    margin: auto;
+  }
+
+  .container > article:first-child h1 {
+    font-size: 2rem;
+  }
+
+  .container section {
+    flex-direction: row;
+  }
+
+  .container section article:first-child {
+    flex: 1;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .container section article:last-child {
+    flex: 1;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+}
